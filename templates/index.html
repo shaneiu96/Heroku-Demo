@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  
+<style>
+        body {
+            padding-right: 90px;
+            padding-left: 90px;
+            padding-top: 5px;
+            padding-bottom: 40px;
+            background-color: rgba(179, 165, 120, 0.642);
+            background-image: url("background.jpg");
+            background-size: cover;
+        }
+
+        #languagediv {
+            width: 99%;
+            height: 30px;
+            float: right;
+            padding-top: 10px;
+            margin-left: 20px;
+            margin-top: 10px;
+            text-align: right;
+            padding-right: 5px;
+        }
+
+        #logodiv {
+            width: 20%;
+            height: 50px;
+            float: left;
+            margin-top: 5px;
+            padding-left: 40px;
+            font-size: 2.5em;
+            padding-top: 2px;
+            text-shadow: blue 2px 5px 10px;
+        }
+
+        #navigationdiv {
+            width: 68%;
+            height: 40px;
+            float: right;
+            font-size: 1em;
+            margin-top: 2px;
+            padding-top: 5px;
+            padding-right: 30px;
+            padding-bottom: 10px;
+            text-shadow: black 2px 5px 10px;
+        }
+
+        nav {
+            text-shadow: black 2px 5px 10px;
+        }
+
+        li {
+            display: inline;
+            margin-left: 20px;
+            margin-right: 20px;
+            font-size: 1.6em;
+            text-align: left;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+            a:hover {
+                text-decoration: underline;
+            }
+
+        h3 {
+            font-size: 2em;
+        }
+
+        #maindiv2-heading {
+            padding-left: 40px;
+            border-bottom: solid;
+        }
+
+        #footerdiv {
+            width: 100%;
+            height: 6px;
+            margin-top: 80px;
+            float: left;
+            background-color: limegreen;
+        }
+
+        #footerline1 {
+            width: 25%;
+            height: 43px;
+            padding-top: 2px;
+            padding-left: 30px;
+            margin: 0 auto;
+            margin-top: 820px;
+            font-size: 1.2em;
+            line-height: 35px;
+        }
+
+        #footerline2 {
+            font-size: 1.2em;
+            padding-left: 470px;
+            margin: 0 auto;
+            line-height: 1px;
+        }
+
+        #maindiv {
+            width: 66%;
+            height: 570px;
+            margin-top: 25px;
+            margin-right: 30px;
+            margin-bottom: 10px;
+            box-shadow: black 2px 4px 10px;
+            padding-top: 5px;
+            float: left;
+            padding-left: 40px;
+            padding-right: 40px;
+            border-style: groove;
+            border-width: 5px;
+            border-color: floralwhite;
+            border-radius: 30px;
+        }
+
+        .p1 {
+            font-size: 1.2em;
+        }
+
+        #maindiv2 {
+            width: 21%;
+            height: 350px;
+            float: right;
+            margin-right: 8px;
+            text-align: left;
+            margin-top: 25px;
+            border-style: groove;
+            border-width: 5px;
+            border-color: floralwhite;
+            box-shadow: black 2px 4px 10px;
+            border-radius: 30px;
+            padding-left: 0px;
+        }
+
+        .w1 {
+            font-size: 1.7em;
+            line-height: 30px;
+            border-bottom: solid;
+            padding-left: 60px;
+        }
+
+        #h1 {
+            color: navy;
+        }
+
+        .a {
+            color: blue;
+        }
+
+        #h2 {
+            color: navy;
+        }
+
+        b {
+            color: navy;
+        }
+
+        @media screen and (max-width:936px) {
+
+            #logodiv {
+                margin-left: 35%;
+                height: 100px;
+            }
+
+            #navigationdiv {
+                float: left;
+                margin-left: 5%;
+                width: 100%;
+            }
+
+            li {
+                font-size: 1em;
+                text-align: left;
+                margin: 10px;
+            }
+
+
+            #footerdiv {
+                width: 100%;
+                height: 2px;
+                margin-top: 80px;
+                float: left;
+                background-color: limegreen;
+            }
+
+            #footerline1 {
+                float: right;
+                margin-right: 80px;
+                margin-top: 20px;
+                padding-right: 70px;
+                width: 36%;
+                text-align: center;
+                font-size: 0.8em;
+            }
+
+            #footerline2 {
+                float: left;
+                padding-top: 3px;
+                padding-left: 10px;
+                margin-right: 40px;
+                line-height: 0.5px;
+                width: 40%;
+                text-align: center;
+                font-size: 0.8em;
+            }
+
+
+
+            #maindiv {
+                width: 80%;
+                height: 570px;
+                margin-top: 25px;
+                margin-right: 20px;
+                margin-left: 10px;
+                margin-bottom: 10px;
+                box-shadow: black 2px 4px 10px;
+                padding-top: 5px;
+                float: left;
+                padding-left: 40px;
+                padding-right: 40px;
+                border-style: groove;
+                border-width: 5px;
+                border-color: floralwhite;
+                border-radius: 30px;
+            }
+
+            .p1 {
+                font-size: 0.8em;
+            }
+
+            #maindiv2 {
+                width: 80%;
+                height: 300px;
+                float: left;
+                margin-left: 50px;
+                text-align: left;
+                margin-top: 25px;
+                border-style: groove;
+                border-width: 5px;
+                border-color: floralwhite;
+                box-shadow: black 2px 4px 10px;
+                border-radius: 30px;
+                padding-left: 5px;
+            }
+
+            .w1 {
+                font-size: 1.4em;
+                line-height: 30px;
+                border-bottom: solid;
+                padding-left: 20px;
+            }
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+
+<div class="login">
+        <div id="logodiv">
+            <img src="/static/logo.png" alt="section" width="70%" height="55px">
+            
+        </div>
+        <div id="navigationdiv">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="home.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="ourproducts.html">Predict Now </a>
+                    </li>
+                    <li>
+                        <a href="process.html">Algorithm</a>
+                    </li>
+                    <li>
+                        <a href="benefits.html">Archieves</a>
+                    </li>
+                    <li>
+                        <a href="contactus.html">About</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div id="maindiv">
+            
+            <h2>PREDICT PAKISTAN'S POPULATION</h2>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="Year" placeholder="Year" required="required" />
+        
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   
+   <br>
+   <b>{{ prediction_text }}</b>
+
+    <br>
+    <br>
+<center>
+              <img src="/plot.png" alt="my plot" height="200" width="400" align="middle">
+              
+         </center>
+         <br>  
+         <text>The population of Pakistan represents 2.56 percent of the world´s total population which arguably means that one person in every 39 people on the planet is a resident of Pakistan.
+         Pakistan's latest estimated population is 212,742,631 According to the 2017 Census of Pakistan. This makes Pakistan the world's fifth-most-populous country.
+         It is estimated that Pakistan will be the 3rd largest Population country by the year 2050.
+         <br>
+         <br>
+         <text>The motto of the country is Unity, Discipline, and Faith.
+          The name Pakistan means Land of the Pure in Persian and Urdu.
+          It is officially called the Islamic Republic of Pakistan.</text>
+         </text>
+ </div>
+           <!--<center>
+                <img src="/predict" alt="Prediction">
+            </center>-->
+            
+        </div>
+    </div>
+    <div id="maindiv2">
+        <p id="w2"><h1 id="maindiv2-heading">Predict Now</h1></p>
+
+        <p class="w1"> <a class="a" href="pakistan.html"><b> Pakistan</b></a></p>
+
+        <p class="w1"> <a class="a" href="province.html"><b>Province</b></a></p>
+
+        <p class="w1"> <a class="a" href="city.html"><b>City</b></a></p>
+
+        <p class="w1"> <a class="a" href="district.html"><b>District</b></a></p>
+
+
+    </div>
+
+    <div id="footerdiv">
+    </div>
+
+    <p id="footerline1"> DISCLAIMER  </p>
+    <text>
+    Advance Census System, does not provide personal or financial advice to individuals or act as an advisor to individuals or government officials.
+    All predictions strategies include the risk of loss for some. Before persuing any population prediction strategies discussed on this website you should always consult with licensed government officials.
+    <text/>
+
+
+</body>
+
+
+
+</body>
+</html>
